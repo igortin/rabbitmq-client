@@ -66,10 +66,6 @@ func CreateBind(ch *amqp.Channel ,b Bind) error {
 
 
 
-
-
-
-
 type Exchange struct {
 	Name        string
 	Kind        string
@@ -122,4 +118,5 @@ func (msg *Message) Send(ch *amqp.Channel) error {
 		msg.Mandatory,
 		msg.Immediate,
 		msg.Publish,
-		)}
+		)
+}
